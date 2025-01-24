@@ -1,0 +1,6 @@
+@use '../../styles/variables.scss' as var;
+.header{
+    background-color: cadetblue;
+    color: var.$primary-color;
+    border-radius: 10px;
+}

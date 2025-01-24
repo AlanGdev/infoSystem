@@ -1,0 +1,8 @@
+@use './styles/variables.scss' as var;
+.app{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}

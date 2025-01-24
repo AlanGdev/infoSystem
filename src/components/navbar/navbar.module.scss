@@ -1,0 +1,11 @@
+@use'../../styles/variables.scss' as var;
+.navbar{
+    display: flex;
+    justify-content: end;
+    gap:5px;
+    &__link{
+        text-decoration: none;
+        color: var.$secundary-color;
+        font-weight: 100;
+    }
+}
