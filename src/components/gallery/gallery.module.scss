@@ -1,0 +1,29 @@
+.gallery{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    &__items{
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap:25px;
+        width:100%;
+        height:65vh;
+        overflow-y: auto;
+}}
+.item{
+    display: flex;
+    gap:10px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    
+    &__picture{
+        width:20%;
+        object-fit: cover;
+        border-radius: 10px;
+
+    }
+    &__infos{
+        text-shadow: none;
+    }
+}

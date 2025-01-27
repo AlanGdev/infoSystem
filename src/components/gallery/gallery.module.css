@@ -1,0 +1,31 @@
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gallery__items {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  height: 65vh;
+  overflow-y: auto;
+}
+
+.item {
+  display: flex;
+  gap: 10px;
+  background-color: antiquewhite;
+  border-radius: 10px;
+}
+.item__picture {
+  width: 20%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.item__infos {
+  text-shadow: none;
+}
+
+/*# sourceMappingURL=gallery.module.css.map */

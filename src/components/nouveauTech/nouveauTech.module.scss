@@ -2,5 +2,20 @@
 .form{
     display: flex;
     flex-direction: column;
-    gap: 10px
+    gap: 10px;
+    &__input{
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+}
+.pictureContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picture{
+    height:70px;
+    object-fit: cover;
+    border-radius: 50%;
 }
