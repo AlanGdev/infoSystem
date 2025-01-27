@@ -5,7 +5,7 @@ function Navbar(){
         <div className={styles.navbar}>
             <Link className={styles.navbar__link} to='/'>Accueil</Link>
             <Link className={styles.navbar__link} to='/cars'>Véhicules</Link>
-            <Link className={styles.navbar__link} to='/persons'>Techniciens</Link>
+            <Link className={styles.navbar__link} to='/techs'>Techniciens</Link>
         </div>
     )
 }

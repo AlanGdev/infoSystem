@@ -60,7 +60,7 @@ const handleFileChange=(e)=>{
                 <input className={styles.form__input} type="text" placeholder="marque" onChange={(e)=>{
                     setInfos({...infos,marque:e.target.value})
                     }}/>
-                <input className={styles.form__input} type="text" placeholder="model" onChange={(e)=>{
+                <input className={styles.form__input} type="text" placeholder="modèle" onChange={(e)=>{
                     setInfos({...infos,model:e.target.value})
                 }}/>
                 <input className={styles.form__input} type="text" placeholder="immatriculation" onChange={(e)=>{
