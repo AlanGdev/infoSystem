@@ -1,15 +1,16 @@
-import styles from './nouveauTech.module.scss'
+import styles from './nouveauCar.module.scss'
 import { useEffect, useState } from 'react'
 
 
-function NouveauTech(){
+function NouveauCar(){
     const formData=new FormData()
     const [infos,setInfos]=useState({
-        nom:'',
-        prenom:'',
-        birthdate:'',
-        nSecu:'',
-        nationality:'',
+        marque:'',
+        model:'',
+        immatriculation:'',
+        initialDate:'',
+        finalDate:'',
+        affectation:'',
         imageUrl:''
     })
     const [file,setFile]=useState(null)
@@ -20,7 +21,7 @@ function NouveauTech(){
         keys.map((key)=>formData.append(key,infos[key]))
         formData.append('file',file)
         try{console.log (JSON.stringify(formData))
-            const response= await fetch('http://localhost:4000/techs/newtech',{
+            const response= await fetch('http://localhost:4000/cars/newcar',{
                 method:'POST',
                 body:formData
             })
@@ -52,24 +53,27 @@ const handleFileChange=(e)=>{
     
     return(
         <div> 
-            <h2>Nouveau Technicien </h2>
+            <h2>Nouveau véhicule </h2>
             <div className={styles.pictureContainer}>
             <img className={styles.picture} src={imgSrc} alt="" /></div>
             <div className={styles.form}>
-                <input className={styles.form__input} type="text" placeholder="nom" onChange={(e)=>{
-                    setInfos({...infos,nom:e.target.value})
+                <input className={styles.form__input} type="text" placeholder="marque" onChange={(e)=>{
+                    setInfos({...infos,marque:e.target.value})
                     }}/>
-                <input className={styles.form__input} type="text" placeholder="prenom" onChange={(e)=>{
-                    setInfos({...infos,prenom:e.target.value})
+                <input className={styles.form__input} type="text" placeholder="model" onChange={(e)=>{
+                    setInfos({...infos,model:e.target.value})
                 }}/>
-                <input className={styles.form__input} type="text" placeholder="numéro sécu" onChange={(e)=>{
-                    setInfos({...infos,nSecu:e.target.value})
+                <input className={styles.form__input} type="text" placeholder="immatriculation" onChange={(e)=>{
+                    setInfos({...infos,immatriculation:e.target.value})
                 }}/>
-                <input className={styles.form__input} type="date" placeholder="Date de naissance" onChange={(e)=>{
-                    setInfos({...infos,birthDate:e.target.value})
+                <input className={styles.form__input} type="Date" placeholder="Date début location" onChange={(e)=>{
+                    setInfos({...infos,initialDate:e.target.value})
                 }}/>
-                <input className={styles.form__input} type="text" placeholder="nationalité" onChange={(e)=>{
-                    setInfos({...infos,nationality:e.target.value})
+                <input className={styles.form__input} type="Date" placeholder="Date fin location" onChange={(e)=>{
+                    setInfos({...infos,finalDate:e.target.value})
+                }}/>
+                <input className={styles.form__input} type="text" placeholder="affectation" onChange={(e)=>{
+                    setInfos({...infos,affectation:e.target.value})
                 }}/>
                 <input className={styles.form__inputFile} type="file" onChange={handleFileChange}/>
                 <button type='submit' onClick={getResponse}>Valider</button>
@@ -77,4 +81,4 @@ const handleFileChange=(e)=>{
         </div>
     )
 }
-export default NouveauTech
+export default NouveauCar
